@@ -1,0 +1,7 @@
+{
+  "name": "Whatssap_Chat_Bot",
+  "version": "1.0.0",
+  "dependencies": {
+    "venom-bot": "^4.3.7"
+  }
+}
