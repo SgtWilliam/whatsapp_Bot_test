@@ -6,6 +6,8 @@ venom
     session: 'testnew',
     multidevice: true,
     headless: false,
+    logQR: true
+
 })
     .then((client) => start(client))
     .catch((error) => {
@@ -17,15 +19,12 @@ venom
 function start(client) {
 
     client.onMessage(async (message) => {
-
         const messages = await client.loadAndGetAllMessagesInChat(message.from)
-        if (messages.length <= 4) {
-
-            client.startTyping(message.from).then()
-            await messagesTemplate.firstMessage(client, message)
-
-
+        if (messages.length <= 2) {
+            await messagesTemplate.firstMessage(client, message);
         }
 
-    });
+
+
+   });
 };
